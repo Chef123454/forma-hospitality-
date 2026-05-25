@@ -7,6 +7,14 @@
       "description": "We built and manage Chef Charlie Dorney, a website showcasing private chef services, villa dining experiences and bespoke catering across Thailand. The site is used to generate enquiries, secure bookings and present services to villa partners, concierge companies and private clients. It has helped establish an online presence and support direct customer enquiries for luxury dining experiences.",
       "image": "/assets/images/uploads/intro.jpg",
       "url": "www.chefcharliedorney.com"
+    },
+    {
+      "title": "Embers Villas",
+      "type": "F&B Brand",
+      "filter": "brand",
+      "description": "We built Embers Villas to provide luxury concierge services, villa support and bespoke experiences for guests staying across Thailand. The platform showcases concierge packages, private dining, transport coordination and tailored stays, helping guests access a more seamless and personalized experience. The website has been developed to establish our brand presence and support enquiries from travelers, villa guests and future partner properties.",
+      "image": "/assets/images/uploads/embers_villas_1200x750.png",
+      "url": "www.embersvillas.com"
     }
   ]
 }
