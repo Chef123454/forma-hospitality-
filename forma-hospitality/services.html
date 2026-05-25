@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Forma Hospitality Studio</title>
+<meta name="description" content="Web design services for restaurants, hotels, villas, private chefs, F&B brands and hospitality businesses.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+.services-full { display:grid;grid-template-columns:1fr; }
+.service-row {
+  display:grid;grid-template-columns:1fr 2fr;border-bottom:1px solid var(--border);
+  transition:background .2s;
+}
+.service-row:last-child{border-bottom:none;}
+.service-row:hover{background:var(--bg2);}
+.sr-left{padding:3rem;border-right:1px solid var(--border);}
+.sr-right{padding:3rem;}
+.sr-num{font-size:11px;font-weight:600;color:var(--green);letter-spacing:.12em;margin-bottom:.6rem;}
+.sr-title{font-family:var(--serif);font-size:1.6rem;font-weight:400;margin-bottom:.5rem;}
+.sr-type{font-size:12px;color:var(--ink3);letter-spacing:.1em;}
+.sr-desc{font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:1.5rem;}
+.sr-includes{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem;}
+.sr-tag{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);border:1px solid var(--border);padding:.2rem .6rem;border-radius:2px;}
+.sr-note{font-size:13px;color:var(--green);font-weight:500;}
+
+/* WHAT MAKES US DIFFERENT */
+.diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);}
+.diff-card{background:var(--bg2);padding:2.2rem;}
+.diff-card:hover{background:#fff;}
+.diff-icon{font-size:1.4rem;margin-bottom:1rem;display:block;}
+.diff-card h4{font-family:var(--serif);font-size:1.15rem;font-weight:400;margin-bottom:.5rem;}
+.diff-card p{font-size:13px;color:var(--ink2);line-height:1.8;}
+
+/* EXTRAS */
+.extras-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);}
+.extra-item{padding:1.8rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
+.extra-item:nth-child(3n){border-right:none;}
+.extra-item:nth-last-child(-n+3){border-bottom:none;}
+.extra-title{font-family:var(--serif);font-size:1.05rem;font-weight:400;margin-bottom:.4rem;}
+.extra-desc{font-size:13px;color:var(--ink2);line-height:1.7;}
+.extra-price{font-size:12px;color:var(--green);font-weight:500;margin-top:.6rem;}
+
+@media(max-width:1024px){
+  .service-row{grid-template-columns:1fr;}
+  .sr-left{border-right:none;border-bottom:1px solid var(--border);padding:2rem;}
+  .sr-right{padding:2rem;}
+  .diff-grid{grid-template-columns:1fr;}
+  .extras-grid{grid-template-columns:1fr;}
+  .extra-item{border-right:none;}
+}
+</style>
+</head>
+<body data-page="services">
+<div id="nav-placeholder"></div>
+
+<div class="page-header">
+  <div class="page-header-tag">Services</div>
+  <h1>Everything your<br>hospitality brand <em>needs online.</em></h1>
+  <p>From a single launch page to a full multi-property website platform — built by people who understand your world.</p>
+</div>
+
+<!-- MAIN SERVICES -->
+<section class="section" style="padding-top:0;">
+  <div class="services-full" style="border:1px solid var(--border);">
+
+    <div class="service-row reveal">
+      <div class="sr-left">
+        <div class="sr-num">01</div>
+        <h3 class="sr-title">Restaurant & Café Websites</h3>
+        <div class="sr-type">Food & Beverage</div>
+      </div>
+      <div class="sr-right">
+        <p class="sr-desc">Your website is the first taste of the experience. We build sites that capture atmosphere, showcase the menu, and make it effortless to book a table or place an order. Fast-loading, beautifully presented, and built to work at midnight on a busy Saturday.</p>
+        <div class="sr-includes">
+          <span class="sr-tag">Menu Design</span><span class="sr-tag">Reservation Integration</span>
+          <span class="sr-tag">Online Ordering</span><span class="sr-tag">Events</span>
+          <span class="sr-tag">Photo Gallery</span><span class="sr-tag">Private Dining</span>
+        </div>
+        <div class="sr-note">Typical delivery: 7–14 days · From $1,497</div>
+      </div>
+    </div>
+
+    <div class="service-row reveal">
+      <div class="sr-left">
+        <div class="sr-num">02</div>
+        <h3 class="sr-title">Hotels & Boutique Stays</h3>
+        <div class="sr-type">Accommodation</div>
+      </div>
+      <div class="sr-right">
+        <p class="sr-desc">Full property websites that tell the story, showcase every room and facility, and connect directly to your booking system. We understand the guest journey from first click to confirmation — and build your site accordingly.</p>
+        <div class="sr-includes">
+          <span class="sr-tag">Room Showcase</span><span class="sr-tag">Booking Integration</span>
+          <span class="sr-tag">Photo Galleries</span><span class="sr-tag">Local Area</span>
+          <span class="sr-tag">Facilities</span><span class="sr-tag">Reviews</span>
+        </div>
+        <div class="sr-note">Typical delivery: 10–14 days · From $2,497</div>
+      </div>
+    </div>
+
+    <div class="service-row reveal">
+      <div class="sr-left">
+        <div class="sr-num">03</div>
+        <h3 class="sr-title">Luxury Villas & Private Residences</h3>
+        <div class="sr-type">Luxury Accommodation</div>
+      </div>
+      <div class="sr-right">
+        <p class="sr-desc">Premium presentation for premium properties. Villas need to justify high nightly rates at a glance — the photography, the copy, the feel of the site all have to say the same thing. We build sites that attract the right guests, not just any guests.</p>
+        <div class="sr-includes">
+          <span class="sr-tag">Property Showcase</span><span class="sr-tag">Enquiry Systems</span>
+          <span class="sr-tag">Concierge Services</span><span class="sr-tag">Virtual Tour</span>
+          <span class="sr-tag">Staff Profiles</span><span class="sr-tag">Availability</span>
+        </div>
+        <div class="sr-note">Typical delivery: 10–14 days · From $2,497</div>
+      </div>
+    </div>
+
+    <div class="service-row reveal">
+      <div class="sr-left">
+        <div class="sr-num">04</div>
+        <h3 class="sr-title">Private Chefs & Events</h3>
+        <div class="sr-type">Culinary & Events</div>
+      </div>
+      <div class="sr-right">
+        <p class="sr-desc">Whether you're a private chef taking villa bookings, a catering company handling events, or a chef building a personal brand — your site needs to show the food, the experience, and the trust. We've built sites for culinary professionals at every level.</p>
+        <div class="sr-includes">
+          <span class="sr-tag">Portfolio</span><span class="sr-tag">Menu Builder</span>
+          <span class="sr-tag">Booking Forms</span><span class="sr-tag">About / Bio</span>
+          <span class="sr-tag">Event Types</span><span class="sr-tag">Testimonials</span>
+        </div>
+        <div class="sr-note">Typical delivery: 7–14 days · From $1,497</div>
+      </div>
+    </div>
+
+    <div class="service-row reveal">
+      <div class="sr-left">
+        <div class="sr-num">05</div>
+        <h3 class="sr-title">F&B Brand Identity & Website</h3>
+        <div class="sr-type">New Brands</div>
+      </div>
+      <div class="sr-right">
+        <p class="sr-desc">Launching a new food or drink brand? We handle the full digital foundation — brand direction, visual identity, and a launch-ready website that establishes credibility from day one. Built for founders who want to look established before they feel it.</p>
+        <div class="sr-includes">
+          <span class="sr-tag">Brand Direction</span><span class="sr-tag">Logo & Identity</span>
+          <span class="sr-tag">Colour & Typography</span><span class="sr-tag">Full Website</span>
+          <span class="sr-tag">Product Pages</span><span class="sr-tag">Stockist Page</span>
+        </div>
+        <div class="sr-note">Typical delivery: 14–21 days · Custom pricing</div>
+      </div>
+    </div>
+
+    <div class="service-row reveal">
+      <div class="sr-left">
+        <div class="sr-num">06</div>
+        <h3 class="sr-title">Yacht & Marine</h3>
+        <div class="sr-type">Luxury Marine</div>
+      </div>
+      <div class="sr-right">
+        <p class="sr-desc">Charter operators, superyacht crews, and marine hospitality businesses need a very specific kind of site. We've worked in this world and understand the guest profile. Sleek, confident, and built for high-value enquiries.</p>
+        <div class="sr-includes">
+          <span class="sr-tag">Charter Showcase</span><span class="sr-tag">Spec Pages</span>
+          <span class="sr-tag">Crew Profiles</span><span class="sr-tag">Enquiry Forms</span>
+          <span class="sr-tag">Route / Destinations</span><span class="sr-tag">Gallery</span>
+        </div>
+        <div class="sr-note">Typical delivery: 10–14 days · From $1,997</div>
+      </div>
+    </div>
+
+    <div class="service-row reveal">
+      <div class="sr-left">
+        <div class="sr-num">07</div>
+        <h3 class="sr-title">Redesigns & Refreshes</h3>
+        <div class="sr-type">Existing Businesses</div>
+      </div>
+      <div class="sr-right">
+        <p class="sr-desc">If your current site was built years ago, isn't converting, loads slowly, or simply doesn't match where the brand is now — we audit the problems and rebuild properly. No patchwork. A considered redesign that respects what's working and fixes what isn't.</p>
+        <div class="sr-includes">
+          <span class="sr-tag">Site Audit</span><span class="sr-tag">Design Overhaul</span>
+          <span class="sr-tag">Speed Optimisation</span><span class="sr-tag">CMS Setup</span>
+          <span class="sr-tag">Content Migration</span><span class="sr-tag">SEO Review</span>
+        </div>
+        <div class="sr-note">Typical delivery: 10–14 days · From $1,497</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHAT MAKES US DIFFERENT -->
+<section class="section section-alt">
+  <div class="s-tag reveal">Our difference</div>
+  <h2 class="s-title reveal d1">Industry knowledge<br><em>changes everything.</em></h2>
+  <p class="s-lead reveal d2">When your designer has actually worked in hospitality, you stop explaining things and start building things.</p>
+  <div class="diff-grid mt-4">
+    <div class="diff-card reveal">
+      <span class="diff-icon">◈</span>
+      <h4>We speak your language</h4>
+      <p>Covers, PMS systems, ADR, yield management, front-of-house flow — we know the terminology and the reality. No blank looks when you explain your operation.</p>
+    </div>
+    <div class="diff-card reveal d1">
+      <span class="diff-icon">◉</span>
+      <h4>We understand the guest journey</h4>
+      <p>From the first Google search to the booking confirmation — we know exactly what guests need to see and feel at every stage. We build for them, not just for you.</p>
+    </div>
+    <div class="diff-card reveal d2">
+      <span class="diff-icon">◎</span>
+      <h4>We write hospitality copy</h4>
+      <p>Every package includes copy written by us. Copy that sounds natural, premium, and true to your brand — not generic web filler that could apply to anyone.</p>
+    </div>
+    <div class="diff-card reveal d3">
+      <span class="diff-icon">◇</span>
+      <h4>We deliver, then disappear</h4>
+      <p>Fast turnaround. Clear communication. You own everything at the end. No long retainers required, no lock-in, no ongoing dependency on us for basic updates.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ADD-ONS -->
+<section class="section">
+  <div class="s-tag reveal">Add-ons</div>
+  <h2 class="s-title reveal d1">Need something extra?<br><em>We've got you.</em></h2>
+  <p class="s-lead reveal d2">These can be added to any package — or booked as standalone projects.</p>
+  <div class="extras-grid mt-4">
+    <div class="extra-item reveal">
+      <div class="extra-title">Digital Menu Design</div>
+      <p class="extra-desc">Clean, mobile-friendly digital menus. Updateable yourself, no PDF required.</p>
+      <div class="extra-price">From $297</div>
+    </div>
+    <div class="extra-item reveal d1">
+      <div class="extra-title">Booking System Integration</div>
+      <p class="extra-desc">Connect your site to OpenTable, Sevenrooms, ResortPass, Cloudbeds, and others.</p>
+      <div class="extra-price">From $497</div>
+    </div>
+    <div class="extra-item reveal d2">
+      <div class="extra-title">SEO Foundation Package</div>
+      <p class="extra-desc">Technical SEO setup, Google Business optimisation, and local search strategy.</p>
+      <div class="extra-price">From $397</div>
+    </div>
+    <div class="extra-item reveal">
+      <div class="extra-title">Brand Identity Pack</div>
+      <p class="extra-desc">Logo, colour palette, typography, and brand guidelines delivered as a usable kit.</p>
+      <div class="extra-price">From $597</div>
+    </div>
+    <div class="extra-item reveal d1">
+      <div class="extra-title">Photography Brief & Direction</div>
+      <p class="extra-desc">Shot lists, mood boards, and direction docs so your photographer captures exactly what the site needs.</p>
+      <div class="extra-price">From $197</div>
+    </div>
+    <div class="extra-item reveal d2">
+      <div class="extra-title">Monthly Maintenance</div>
+      <p class="extra-desc">Content updates, speed monitoring, security patches, and technical upkeep. One less thing to worry about.</p>
+      <div class="extra-price">From $197/month</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-block">
+  <div class="dots"></div><div class="glow"></div>
+  <h2 class="reveal">Not sure what<br>you <em>need?</em></h2>
+  <p class="reveal d1">Tell us about your business. We'll recommend the right approach for your budget and goals — no obligation.</p>
+  <div class="cta-actions reveal d2">
+    <a href="/contact.html" class="btn-white">Talk to Us</a>
+    <a href="/pricing.html" class="btn-ghost-white">View Pricing</a>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="/assets/main.js"></script>
+</body>
+</html>
