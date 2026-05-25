@@ -5,7 +5,7 @@
 
 backend:
   name: git-gateway
-  repo: Chef123454/forma-hospitality-
+  repo: Chef123454/forma-hospitality
   branch: main
 
 # Media uploads
