@@ -1,17 +1,185 @@
+# ─────────────────────────────────────────────
+# FORMA HOSPITALITY — CMS CONFIGURATION
+# Decap CMS (formerly Netlify CMS)
+# ─────────────────────────────────────────────
+
 backend:
   name: git-gateway
   repo: Chef123454/forma-hospitality-
   branch: main
 
-media_folder: "assets"
-public_folder: "/assets"
+# Media uploads
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
 
 collections:
-  - name: "pages"
-    label: "Pages"
+
+  # ── SITE SETTINGS ──────────────────────────
+  - name: "settings"
+    label: "⚙️ Site Settings"
     files:
-      - file: "index.html"
-        label: "Home Page"
-        name: "home"
+      - label: "General Settings"
+        name: "general"
+        file: "data/settings.json"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - label: "Studio Name"
+            name: "studio_name"
+            widget: "string"
+            default: "Forma"
+          - label: "Tagline"
+            name: "tagline"
+            widget: "string"
+            default: "Hospitality Web Design Studio"
+          - label: "Contact Email"
+            name: "email"
+            widget: "string"
+            default: "hello@formawebdesign.com"
+          - label: "Currently Taking Projects"
+            name: "taking_projects"
+            widget: "boolean"
+            default: true
+          - label: "Clients Launched (number shown in stats)"
+            name: "clients_count"
+            widget: "string"
+            default: "50+"
+          - label: "Years Experience"
+            name: "years_experience"
+            widget: "string"
+            default: "16+"
+          - label: "Footer Description"
+            name: "footer_desc"
+            widget: "text"
+            default: "Hospitality websites built by people who've actually worked in the industry."
+
+  # ── TESTIMONIALS ───────────────────────────
+  - name: "testimonials"
+    label: "💬 Testimonials"
+    files:
+      - label: "All Testimonials"
+        name: "testimonials"
+        file: "data/testimonials.json"
+        fields:
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - label: "Client Quote"
+                name: "quote"
+                widget: "text"
+                hint: "Write the testimonial without quotation marks"
+              - label: "Client Name"
+                name: "name"
+                widget: "string"
+              - label: "Role / Title"
+                name: "role"
+                widget: "string"
+                hint: "e.g. Head Chef & Owner, Restaurant Manager"
+              - label: "Location"
+                name: "location"
+                widget: "string"
+                hint: "e.g. Bangkok, Phuket, London"
+                required: false
+              - label: "Initials (shown in avatar)"
+                name: "initials"
+                widget: "string"
+                hint: "2 letters, e.g. ML — leave blank to auto-generate"
+                required: false
+
+  # ── PORTFOLIO PROJECTS ─────────────────────
+  - name: "projects"
+    label: "🖼️ Portfolio Projects"
+    files:
+      - label: "All Projects"
+        name: "projects"
+        file: "data/projects.json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}} ({{fields.type}})"
+            fields:
+              - label: "Project Title"
+                name: "title"
+                widget: "string"
+                hint: "e.g. Villa Samara, Maison Laurent"
+              - label: "Business Type"
+                name: "type"
+                widget: "select"
+                options:
+                  - "Restaurant"
+                  - "Café"
+                  - "Hotel"
+                  - "Boutique Hotel"
+                  - "Luxury Villa"
+                  - "Private Chef"
+                  - "F&B Brand"
+                  - "Yacht Charter"
+                  - "Event Venue"
+                  - "Redesign"
+              - label: "Filter Category"
+                name: "filter"
+                widget: "select"
+                hint: "Used for the filter buttons on the work page"
+                options:
+                  - { label: "Restaurant & Café", value: "restaurant" }
+                  - { label: "Hotel & Villa", value: "hotel" }
+                  - { label: "Private Chef", value: "chef" }
+                  - { label: "F&B Brand", value: "brand" }
+                  - { label: "Yacht & Marine", value: "yacht" }
+              - label: "Short Description"
+                name: "description"
+                widget: "text"
+                hint: "2–3 sentences. What did you build and what was the outcome?"
+              - label: "Project Image"
+                name: "image"
+                widget: "image"
+                required: false
+                hint: "Upload a screenshot or photo of the finished site (recommended: 1200 x 750px)"
+              - label: "Live Site URL"
+                name: "url"
+                widget: "string"
+                required: false
+                hint: "Link to the live site if you want to show it"
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                hint: "e.g. Reservation, Menu, E-commerce, Booking — comma separated"
+                required: false
+
+  # ── PRICING ────────────────────────────────
+  - name: "pricing"
+    label: "💰 Pricing"
+    files:
+      - label: "Package Prices"
+        name: "pricing"
+        file: "data/pricing.json"
+        fields:
+          - label: "Starter Package Price"
+            name: "starter_price"
+            widget: "string"
+            default: "$1,497"
+          - label: "Starter Delivery Time"
+            name: "starter_time"
+            widget: "string"
+            default: "5–7 days"
+          - label: "Business Package Price"
+            name: "business_price"
+            widget: "string"
+            default: "$2,997"
+          - label: "Business Delivery Time"
+            name: "business_time"
+            widget: "string"
+            default: "10–14 days"
+          - label: "Premium Package Label"
+            name: "premium_price"
+            widget: "string"
+            default: "Custom"
+          - label: "Monthly Maintenance From"
+            name: "maintenance_price"
+            widget: "string"
+            default: "$197/month"
+          - label: "Show 'Taking New Projects' badge"
+            name: "show_availability"
+            widget: "boolean"
+            default: true
