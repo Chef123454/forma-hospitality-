@@ -15,4 +15,3 @@ collections:
         name: "home"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-# force rebuild 2
