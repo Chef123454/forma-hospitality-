@@ -3,8 +3,6 @@ backend:
   repo: Chef123454/forma-hospitality-
   branch: main
 
-local_backend: true
-
 media_folder: "assets"
 public_folder: "/assets"
 
