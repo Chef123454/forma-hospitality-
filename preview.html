@@ -39,30 +39,19 @@ body{background:#111;color:#f8f3e8;}
 .concept-banner{border:1px solid rgba(255,255,255,.14);padding:2rem;max-width:840px;}
 .concept-banner p{color:rgba(255,255,255,.68);font-size:14px;line-height:1.85;}
 .concept-disclaimer{background:#fff8df;color:#4f4122;padding:1rem 4rem;font-size:12px;line-height:1.7;border-bottom:1px solid rgba(0,0,0,.08);}
-@media(max-width:900px){
-  .concept-nav{padding:1rem 1.5rem}.concept-nav-links{display:none}
-  .concept-hero{grid-template-columns:1fr}.concept-copy{padding:5rem 1.5rem 3rem}.concept-section{padding:4rem 1.5rem}
-  .concept-grid{grid-template-columns:1fr}.concept-card{border-right:none;border-bottom:1px solid rgba(28,27,24,.11)}.concept-card:last-child{border-bottom:none}
-  .concept-disclaimer{padding:1rem 1.5rem}
-}
+@media(max-width:900px){.concept-nav{padding:1rem 1.5rem}.concept-nav-links{display:none}.concept-hero{grid-template-columns:1fr}.concept-copy{padding:5rem 1.5rem 3rem}.concept-section{padding:4rem 1.5rem}.concept-grid{grid-template-columns:1fr}.concept-card{border-right:none;border-bottom:1px solid rgba(28,27,24,.11)}.concept-card:last-child{border-bottom:none}.concept-disclaimer{padding:1rem 1.5rem}}
 </style>
 </head>
 <body>
 <div class="concept-disclaimer">Automated concept draft prepared by Forma. This private preview is a starting direction only; final design, copy, imagery, booking flows, and performance would be refined by the studio.</div>
 <main id="conceptRoot" class="concept-shell">
-  <div class="concept-nav">
-    <div id="conceptLogo" class="concept-logo">Your Venue</div>
-    <div class="concept-nav-links"><span>Menu</span><span>Experience</span><span>Private Hire</span><span>Book</span></div>
-  </div>
+  <div class="concept-nav"><div id="conceptLogo" class="concept-logo">Your Venue</div><div class="concept-nav-links"><span>Menu</span><span>Experience</span><span>Private Hire</span><span>Book</span></div></div>
   <section class="concept-hero">
     <div class="concept-copy">
       <div id="conceptKicker" class="concept-kicker">Hospitality Website Concept</div>
       <h1 id="conceptHeadline">A sharper online home for <em>your hospitality brand.</em></h1>
       <p id="conceptIntro">A polished preview built around your business type, guest journey, and the details currently visible online.</p>
-      <div class="concept-actions">
-        <a href="/contact.html" class="concept-primary">Book a Call</a>
-        <a href="/pricing.html" class="concept-secondary">View Packages</a>
-      </div>
+      <div class="concept-actions"><a href="/contact.html" class="concept-primary">Book a Call</a><a href="/pricing.html" class="concept-secondary">View Packages</a></div>
     </div>
     <div id="conceptVisual" class="concept-visual"><div class="concept-placeholder">Forma Concept</div></div>
   </section>
@@ -72,59 +61,20 @@ body{background:#111;color:#f8f3e8;}
     <div id="conceptCards" class="concept-grid"></div>
   </section>
   <section class="concept-section dark">
-    <div class="concept-banner">
-      <h2 style="color:#fff;">Next step with <em>Forma.</em></h2>
-      <p id="conceptNext">If this direction feels close, Forma can turn it into a proper website with custom design, written copy, responsive build, and launch support.</p>
-    </div>
+    <div class="concept-banner"><h2 style="color:#fff;">Next step with <em>Forma.</em></h2><p id="conceptNext">If this direction feels close, Forma can turn it into a proper website with custom design, written copy, responsive build, and launch support.</p></div>
   </section>
 </main>
 <script>
 (function(){
-  function decodeConcept() {
-    const params = new URLSearchParams(window.location.search);
-    const raw = params.get('concept');
-    if (!raw) return null;
-    try {
-      const normalized = raw.replace(/-/g, '+').replace(/_/g, '/');
-      const padded = normalized + '='.repeat((4 - normalized.length % 4) % 4);
-      const json = decodeURIComponent(escape(atob(padded)));
-      return JSON.parse(json);
-    } catch {
-      return null;
-    }
-  }
-  function text(id, value) {
-    const el = document.getElementById(id);
-    if (el && value) el.textContent = value;
-  }
-  function escapeHtml(value) {
-    return String(value || '').replace(/[&<>"']/g, function(char) {
-      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char];
-    });
-  }
-  function headlineHtml(value) {
-    return escapeHtml(value).replace(/&lt;em&gt;/g, '<em>').replace(/&lt;\/em&gt;/g, '</em>');
-  }
-  const concept = decodeConcept();
-  if (!concept) {
-    text('conceptIntro', 'This preview link is missing its concept data. Please generate a fresh preview from the Imagine page.');
-    return;
-  }
-  document.documentElement.style.setProperty('--concept-bg', concept.palette.bg);
-  document.documentElement.style.setProperty('--concept-accent', concept.palette.accent);
-  document.documentElement.style.setProperty('--concept-ink', concept.palette.ink);
-  text('conceptLogo', concept.businessName);
-  text('conceptKicker', concept.businessType + ' concept');
-  document.getElementById('conceptHeadline').innerHTML = headlineHtml(concept.headline);
-  text('conceptIntro', concept.intro);
-  text('conceptPositioning', concept.positioning);
-  text('conceptNext', concept.nextStep);
-  if (concept.image) {
-    document.getElementById('conceptVisual').innerHTML = '<img src="' + concept.image.replace(/"/g, '&quot;') + '" alt="">';
-  }
-  document.getElementById('conceptCards').innerHTML = concept.sections.map(function(item){
-    return '<article class="concept-card"><h3>' + escapeHtml(item.title) + '</h3><p>' + escapeHtml(item.copy) + '</p></article>';
-  }).join('');
+  function decodeConcept(){const params=new URLSearchParams(window.location.search);const raw=params.get('concept');if(!raw)return null;try{const normalized=raw.replace(/-/g,'+').replace(/_/g,'/');const padded=normalized+'='.repeat((4-normalized.length%4)%4);const json=decodeURIComponent(escape(atob(padded)));return JSON.parse(json);}catch{return null;}}
+  function text(id,value){const el=document.getElementById(id);if(el&&value)el.textContent=value;}
+  function escapeHtml(value){return String(value||'').replace(/[&<>"']/g,function(char){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[char];});}
+  function headlineHtml(value){return escapeHtml(value).replace(/&lt;em&gt;/g,'<em>').replace(/&lt;\/em&gt;/g,'</em>');}
+  const concept=decodeConcept();if(!concept){text('conceptIntro','This preview link is missing its concept data. Please generate a fresh preview from the Imagine page.');return;}
+  document.documentElement.style.setProperty('--concept-bg',concept.palette.bg);document.documentElement.style.setProperty('--concept-accent',concept.palette.accent);document.documentElement.style.setProperty('--concept-ink',concept.palette.ink);
+  text('conceptLogo',concept.businessName);text('conceptKicker',concept.businessType+' concept');document.getElementById('conceptHeadline').innerHTML=headlineHtml(concept.headline);text('conceptIntro',concept.intro);text('conceptPositioning',concept.positioning);text('conceptNext',concept.nextStep);
+  if(concept.image){document.getElementById('conceptVisual').innerHTML='<img src="'+concept.image.replace(/"/g,'&quot;')+'" alt="">';}
+  document.getElementById('conceptCards').innerHTML=concept.sections.map(function(item){return '<article class="concept-card"><h3>'+escapeHtml(item.title)+'</h3><p>'+escapeHtml(item.copy)+'</p></article>';}).join('');
 })();
 </script>
 </body>

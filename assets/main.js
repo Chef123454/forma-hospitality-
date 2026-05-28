@@ -1,11 +1,11 @@
 /* ─────────────────────────────────────────────
-   FORMA HOSPITALITY — SHARED JS
+   HOSPITALITY STUDIO — SHARED JS
    ───────────────────────────────────────────── */
 
 /* ── SHARED NAV HTML ── */
 const NAV_HTML = `
 <nav id="nav">
-  <a href="/index.html" class="nav-logo">FOR<span class="dot">M</span>A<span class="dot">.</span></a>
+  <a href="/index.html" class="nav-logo">Hospitality<span class="dot">.</span>Studio</a>
   <ul class="nav-links">
     <li><a href="/index.html" data-page="index">Home</a></li>
     <li><a href="/services.html" data-page="services">Services</a></li>
@@ -33,7 +33,7 @@ const FOOTER_HTML = `
 <footer id="footer">
   <div class="footer-top">
     <div>
-      <div class="footer-brand-name">FOR<span>M</span>A<span>.</span></div>
+      <div class="footer-brand-name">Hospitality<span>.</span>Studio</div>
       <p class="footer-brand-desc">Hospitality websites built by people who've actually worked in the industry. We know what your guests need to see — and what makes them book.</p>
     </div>
     <div class="footer-col">
@@ -65,7 +65,7 @@ const FOOTER_HTML = `
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="footer-copy">© 2025 Forma Studio · Remote · Worldwide</p>
+    <p class="footer-copy">© 2025 Hospitality Studio · Remote · Worldwide</p>
     <div class="footer-badge">Currently taking new projects</div>
   </div>
 </footer>`;
@@ -157,14 +157,17 @@ async function renderProjects(containerId, limit = 99) {
   if (!container || !data || !data.projects) return;
   const items = data.projects.slice(0, limit);
   container.innerHTML = items.map(p => `
-    <div class="project-card reveal">
-      <div class="project-img" style="background:var(--bg3);aspect-ratio:16/9;margin-bottom:1.2rem;border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.1rem;color:var(--ink3);">
-        ${p.image ? `<img src="${p.image}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r);">` : p.title}
+    <div class="project-card reveal" data-type="${p.filter || ''}">
+      <div class="project-img">
+        ${p.image ? `<img src="${p.image}" alt="${p.title}">` : `<div class="project-img-placeholder">${p.title}</div>`}
       </div>
-      <div class="project-type" style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem;">${p.type}</div>
-      <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:400;margin-bottom:.4rem;">${p.title}</h3>
-      <p style="font-size:13px;color:var(--ink2);">${p.description}</p>
-      ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener" style="display:inline-block;margin-top:.8rem;font-size:12px;font-weight:500;color:var(--green);text-decoration:none;">View site →</a>` : ''}
+      <div class="project-info">
+        <div class="project-type">${p.type}</div>
+        <h3 class="project-title">${p.title}</h3>
+        <p class="project-desc">${p.description}</p>
+        ${Array.isArray(p.tags) ? `<div class="project-tags">${p.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}</div>` : ''}
+        ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener" class="project-link">View site</a>` : ''}
+      </div>
     </div>`).join('');
   // Re-observe new elements for reveal
   document.querySelectorAll('.reveal:not(.in)').forEach(el => {

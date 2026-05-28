@@ -1,58 +1,49 @@
 {
   "projects": [
     {
-      "title": "Maison Laurent",
-      "type": "Restaurant",
-      "filter": "restaurant",
-      "description": "French-inspired bistro in Bangkok. Full website with online reservations, digital menus, and private dining enquiry. Launched in 9 days.",
-      "image": "",
-      "url": "",
-      "tags": ["Reservation", "Menu", "Events"]
+      "title": "Embers Villas & Concierge",
+      "type": "Luxury Villas & Concierge",
+      "filter": "villa",
+      "description": "A premium villa concierge and management website for Thailand, built around private chef services, villa experiences, transfers and curated guest support.",
+      "image": "https://embersvillas.com/images/personal-concierge.png",
+      "url": "https://embersvillas.com/",
+      "tags": ["Featured", "Villa Concierge", "Thailand"]
     },
     {
-      "title": "Villa Samara",
-      "type": "Luxury Villa",
-      "filter": "hotel",
-      "description": "6-bedroom luxury villa in Koh Samui. Premium showcase site with booking enquiry, staff profiles, and concierge services. Doubled direct enquiries within 6 weeks.",
-      "image": "",
-      "url": "",
-      "tags": ["Villa", "Booking", "Concierge"]
-    },
-    {
-      "title": "Chef Aria — Private Dining",
+      "title": "Chef Charlie Dorney",
       "type": "Private Chef",
       "filter": "chef",
-      "description": "Personal brand site for a private chef offering villa experiences and events across Southeast Asia. Portfolio, menus, and enquiry system.",
-      "image": "",
-      "url": "",
-      "tags": ["Portfolio", "Menus", "Bookings"]
+      "description": "A personal chef website for villa, yacht and event dining across Thailand, positioning the service around bespoke menus, premium occasions and direct enquiries.",
+      "image": "https://static.wixstatic.com/media/5c988a_373f0b448132444cbc71592fcc67d405~mv2.jpg/v1/fill/w_2500,h_3333,al_c/5c988a_373f0b448132444cbc71592fcc67d405~mv2.jpg",
+      "url": "https://www.chefcharliedorney.com/",
+      "tags": ["Private Dining", "Yachts", "Events"]
     },
     {
-      "title": "Grove Coffee Co.",
-      "type": "F&B Brand",
-      "filter": "brand",
-      "description": "Specialty coffee brand launching in Chiang Mai. Full brand identity plus e-commerce website for online bean sales and subscription offering.",
-      "image": "",
-      "url": "",
-      "tags": ["Brand", "E-commerce", "Subscription"]
+      "title": "Apricity, Mayfair",
+      "type": "UK Concept Study",
+      "filter": "restaurant concept",
+      "description": "A concept study for a Michelin Green Star restaurant in Mayfair, focused on regenerative hospitality, seasonal British produce, menus, private dining and reservations.",
+      "image": "https://static.wixstatic.com/media/4a538a_1bb5c0b872dc4d9d869d525d4ed9724e%7Emv2.png/v1/fit/w_2500,h_1330,al_c/4a538a_1bb5c0b872dc4d9d869d525d4ed9724e%7Emv2.png",
+      "url": "https://www.apricityrestaurant.com/",
+      "tags": ["Restaurant", "London", "Sustainable Dining"]
     },
     {
-      "title": "The Shore House",
-      "type": "Boutique Hotel",
-      "filter": "hotel",
-      "description": "12-room boutique hotel in Krabi. Complete redesign from a dated WordPress site — new identity, rooms showcase, integrated with Cloudbeds.",
-      "image": "",
-      "url": "",
-      "tags": ["Redesign", "Booking", "Rooms"]
+      "title": "Winsome, Manchester",
+      "type": "UK Concept Study",
+      "filter": "restaurant concept",
+      "description": "A concept study for a Manchester restaurant built around Northern hospitality, thoughtful British cooking, seasonal menus, reservations and private hire.",
+      "image": "https://winsomemcr.co.uk/images/logos/Pig_L_Black.png",
+      "url": "https://winsomemcr.co.uk/",
+      "tags": ["Restaurant", "Manchester", "Private Hire"]
     },
     {
-      "title": "SY Meridian",
-      "type": "Yacht Charter",
-      "filter": "yacht",
-      "description": "Luxury sailing yacht offering charter experiences across the Mediterranean and Southeast Asia. Spec pages, crew profiles, routes, and enquiry system.",
-      "image": "",
-      "url": "",
-      "tags": ["Charter", "Crew", "Routes"]
+      "title": "Cedar Manor, Windermere",
+      "type": "UK Concept Study",
+      "filter": "hotel concept",
+      "description": "A concept study for a Lake District boutique hotel, built around rooms, afternoon tea, romantic retreats, local hospitality and direct booking pathways.",
+      "image": "https://media.guestnet.co.uk/media/cedarmanor/storage/uploads/variants/140/arq2ixs0cj.webp",
+      "url": "https://cedarmanor.co.uk/",
+      "tags": ["Boutique Hotel", "Lake District", "Direct Booking"]
     }
   ]
 }
