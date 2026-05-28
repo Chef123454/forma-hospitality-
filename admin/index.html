@@ -1,13 +1,62 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forma CMS</title>
-  <!-- Decap CMS (formerly Netlify CMS) -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fafaf7;
+      color: #1c1b18;
+      font-family: Arial, sans-serif;
+    }
+
+    .cms-status {
+      max-width: 560px;
+      padding: 2rem;
+      border: 1px solid rgba(28, 27, 24, .12);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    .cms-status h1 {
+      margin: 0 0 .6rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    .cms-status p {
+      margin: 0 0 .8rem;
+      color: #4b4946;
+      font-size: .95rem;
+    }
+
+    .cms-status code {
+      background: #f3f2ee;
+      padding: .12rem .28rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- CMS renders itself here — no other code needed -->
+  <div class="cms-status" id="cms-status">
+    <h1>Loading Forma CMS</h1>
+    <p>If this message stays on screen, refresh once.</p>
+    <p>If the CMS still does not load, connect the site to GitHub in Netlify, then enable <code>Identity</code> and <code>Git Gateway</code>.</p>
+  </div>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    window.CMS_MANUAL_INIT = false;
+    window.addEventListener('error', function () {
+      var status = document.getElementById('cms-status');
+      if (!status) return;
+      status.innerHTML = '<h1>CMS could not load</h1><p>The Decap CMS script did not start. Check that this site is deployed from GitHub, then enable Netlify Identity and Git Gateway in the Netlify dashboard.</p>';
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.6.3/dist/decap-cms.js"></script>
 </body>
 </html>
