@@ -1,20 +1,58 @@
 {
   "projects": [
     {
-      "title": "Chef Charlie Dorney",
-      "type": "Private Chef",
-      "filter": "chef",
-      "description": "We built and manage Chef Charlie Dorney, a website showcasing private chef services, villa dining experiences and bespoke catering across Thailand. The site is used to generate enquiries, secure bookings and present services to villa partners, concierge companies and private clients. It has helped establish an online presence and support direct customer enquiries for luxury dining experiences.",
-      "image": "/assets/images/uploads/chef_charlie_1200x750.jpg",
-      "url": "https://www.chefcharliedorney.com"
+      "title": "Maison Laurent",
+      "type": "Restaurant",
+      "filter": "restaurant",
+      "description": "French-inspired bistro in Bangkok. Full website with online reservations, digital menus, and private dining enquiry. Launched in 9 days.",
+      "image": "",
+      "url": "",
+      "tags": ["Reservation", "Menu", "Events"]
     },
     {
-      "title": "Embers Villas",
+      "title": "Villa Samara",
+      "type": "Luxury Villa",
+      "filter": "hotel",
+      "description": "6-bedroom luxury villa in Koh Samui. Premium showcase site with booking enquiry, staff profiles, and concierge services. Doubled direct enquiries within 6 weeks.",
+      "image": "",
+      "url": "",
+      "tags": ["Villa", "Booking", "Concierge"]
+    },
+    {
+      "title": "Chef Aria — Private Dining",
+      "type": "Private Chef",
+      "filter": "chef",
+      "description": "Personal brand site for a private chef offering villa experiences and events across Southeast Asia. Portfolio, menus, and enquiry system.",
+      "image": "",
+      "url": "",
+      "tags": ["Portfolio", "Menus", "Bookings"]
+    },
+    {
+      "title": "Grove Coffee Co.",
       "type": "F&B Brand",
       "filter": "brand",
-      "description": "We built Embers Villas to provide luxury concierge services, villa support and bespoke experiences for guests staying across Thailand. The platform showcases concierge packages, private dining, transport coordination and tailored stays, helping guests access a more seamless and personalized experience. The website has been developed to establish our brand presence and support enquiries from travelers, villa guests and future partner properties.",
-      "image": "/assets/images/uploads/embers_villas_1200x750.png",
-      "url": "https://www.embersvillas.com"
+      "description": "Specialty coffee brand launching in Chiang Mai. Full brand identity plus e-commerce website for online bean sales and subscription offering.",
+      "image": "",
+      "url": "",
+      "tags": ["Brand", "E-commerce", "Subscription"]
+    },
+    {
+      "title": "The Shore House",
+      "type": "Boutique Hotel",
+      "filter": "hotel",
+      "description": "12-room boutique hotel in Krabi. Complete redesign from a dated WordPress site — new identity, rooms showcase, integrated with Cloudbeds.",
+      "image": "",
+      "url": "",
+      "tags": ["Redesign", "Booking", "Rooms"]
+    },
+    {
+      "title": "SY Meridian",
+      "type": "Yacht Charter",
+      "filter": "yacht",
+      "description": "Luxury sailing yacht offering charter experiences across the Mediterranean and Southeast Asia. Spec pages, crew profiles, routes, and enquiry system.",
+      "image": "",
+      "url": "",
+      "tags": ["Charter", "Crew", "Routes"]
     }
   ]
 }

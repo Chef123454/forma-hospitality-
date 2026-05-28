@@ -164,7 +164,7 @@ async function renderProjects(containerId, limit = 99) {
       <div class="project-type" style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem;">${p.type}</div>
       <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:400;margin-bottom:.4rem;">${p.title}</h3>
       <p style="font-size:13px;color:var(--ink2);">${p.description}</p>
-      ${p.url ? `<button onclick="window.open('${p.url}','_blank','noopener,noreferrer')" style="background:none;border:none;cursor:pointer;display:inline-block;margin-top:.8rem;font-size:12px;font-weight:500;color:var(--green);font-family:var(--sans);padding:0;">View site →</button>` : ''}
+      ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener" style="display:inline-block;margin-top:.8rem;font-size:12px;font-weight:500;color:var(--green);text-decoration:none;">View site →</a>` : ''}
     </div>`).join('');
   // Re-observe new elements for reveal
   document.querySelectorAll('.reveal:not(.in)').forEach(el => {

@@ -122,6 +122,32 @@ To see submissions:
 
 ---
 
+## IMAGINE YOUR WEBSITE FEATURE
+
+The homepage now links to `/imagine.html`, where visitors can request an automated website concept.
+
+The flow is:
+1. Visitor fills in name, email, telephone, business type, current website, and notes
+2. Netlify Function `netlify/functions/imagine.js` creates a private preview link
+3. Preview opens on `/preview.html`
+4. If email is configured, the visitor receives the link and the Forma team receives the lead details
+
+### Netlify environment variables
+
+Add these in Netlify under **Site settings** -> **Environment variables**:
+
+| Variable | Required? | What it does |
+|---|---|---|
+| `RESEND_API_KEY` | For email | Sends the visitor and team emails via Resend |
+| `FROM_EMAIL` | For email | Verified sender address, e.g. `hello@yourdomain.com` |
+| `TEAM_EMAIL` | Optional | Where lead notifications go. Falls back to `FROM_EMAIL` |
+| `OPENAI_API_KEY` | Optional | Enables AI-written concepts instead of the built-in fallback generator |
+| `OPENAI_MODEL` | Optional | Model name to use. If omitted, the function uses its default |
+
+Without these variables, the preview still generates, but emails are not sent and the concept uses the built-in hospitality draft generator.
+
+---
+
 ## NEED HELP?
 
 - Netlify docs: **docs.netlify.com**

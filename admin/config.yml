@@ -5,11 +5,14 @@
 
 backend:
   name: git-gateway
-  branch: main
+  branch: main   # Change to 'master' if your repo uses master
 
 # Media uploads
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
+
+# Enable editorial workflow (save drafts before publishing)
+# publish_mode: editorial_workflow
 
 collections:
 
