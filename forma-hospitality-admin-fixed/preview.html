@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Concept - Forma Hospitality Studio</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+body{background:#111;color:#f8f3e8;}
+.concept-shell{min-height:100vh;background:var(--concept-bg,#1c1b18);color:var(--concept-ink,#f8f3e8);}
+.concept-nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;border-bottom:1px solid rgba(255,255,255,.12);}
+.concept-logo{font-family:var(--serif);font-size:1.25rem;color:var(--concept-ink,#fff);}
+.concept-nav-links{display:flex;gap:1.4rem;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.64);}
+.concept-hero{display:grid;grid-template-columns:1fr .85fr;min-height:78vh;}
+.concept-copy{padding:7rem 4rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.concept-kicker{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--concept-accent,#c8a96a);margin-bottom:1.4rem;}
+.concept-copy h1{font-size:clamp(3rem,6vw,6rem);line-height:1;color:var(--concept-ink,#fff);max-width:780px;margin-bottom:1.5rem;}
+.concept-copy h1 em{font-style:italic;color:var(--concept-accent,#c8a96a);}
+.concept-copy p{font-size:16px;line-height:1.85;max-width:540px;color:rgba(255,255,255,.72);margin-bottom:2rem;}
+.concept-actions{display:flex;gap:1rem;flex-wrap:wrap;}
+.concept-primary,.concept-secondary{padding:.9rem 1.4rem;border-radius:2px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
+.concept-primary{background:var(--concept-accent,#c8a96a);color:#111;}
+.concept-secondary{border:1px solid rgba(255,255,255,.24);color:#fff;}
+.concept-visual{min-height:420px;position:relative;background:rgba(255,255,255,.06);overflow:hidden;}
+.concept-visual img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92) contrast(1.04);}
+.concept-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.26));}
+.concept-placeholder{height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:2.4rem;color:rgba(255,255,255,.42);padding:2rem;text-align:center;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.02));}
+.concept-section{padding:5rem 4rem;background:#fbfaf5;color:#1c1b18;}
+.concept-section.dark{background:#151410;color:#fff;}
+.concept-section h2{font-size:clamp(2rem,3.6vw,3.5rem);line-height:1.05;margin-bottom:1.2rem;}
+.concept-section h2 em{font-style:italic;color:var(--concept-accent,#936d3d);}
+.concept-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(28,27,24,.11);margin-top:2.6rem;}
+.concept-card{padding:2rem;border-right:1px solid rgba(28,27,24,.11);}
+.concept-card:last-child{border-right:none;}
+.concept-card h3{font-size:1.15rem;margin-bottom:.6rem;}
+.concept-card p{font-size:13px;line-height:1.8;}
+.concept-banner{border:1px solid rgba(255,255,255,.14);padding:2rem;max-width:840px;}
+.concept-banner p{color:rgba(255,255,255,.68);font-size:14px;line-height:1.85;}
+.concept-disclaimer{background:#fff8df;color:#4f4122;padding:1rem 4rem;font-size:12px;line-height:1.7;border-bottom:1px solid rgba(0,0,0,.08);}
+@media(max-width:900px){.concept-nav{padding:1rem 1.5rem}.concept-nav-links{display:none}.concept-hero{grid-template-columns:1fr}.concept-copy{padding:5rem 1.5rem 3rem}.concept-section{padding:4rem 1.5rem}.concept-grid{grid-template-columns:1fr}.concept-card{border-right:none;border-bottom:1px solid rgba(28,27,24,.11)}.concept-card:last-child{border-bottom:none}.concept-disclaimer{padding:1rem 1.5rem}}
+</style>
+</head>
+<body>
+<div class="concept-disclaimer">Automated concept draft prepared by Forma. This private preview is a starting direction only; final design, copy, imagery, booking flows, and performance would be refined by the studio.</div>
+<main id="conceptRoot" class="concept-shell">
+  <div class="concept-nav"><div id="conceptLogo" class="concept-logo">Your Venue</div><div class="concept-nav-links"><span>Menu</span><span>Experience</span><span>Private Hire</span><span>Book</span></div></div>
+  <section class="concept-hero">
+    <div class="concept-copy">
+      <div id="conceptKicker" class="concept-kicker">Hospitality Website Concept</div>
+      <h1 id="conceptHeadline">A sharper online home for <em>your hospitality brand.</em></h1>
+      <p id="conceptIntro">A polished preview built around your business type, guest journey, and the details currently visible online.</p>
+      <div class="concept-actions"><a href="/contact.html" class="concept-primary">Book a Call</a><a href="/pricing.html" class="concept-secondary">View Packages</a></div>
+    </div>
+    <div id="conceptVisual" class="concept-visual"><div class="concept-placeholder">Forma Concept</div></div>
+  </section>
+  <section class="concept-section">
+    <h2>Designed to turn interest<br><em>into action.</em></h2>
+    <p id="conceptPositioning" style="max-width:620px;font-size:15px;line-height:1.85;">This concept focuses on clarity, atmosphere, trust, and conversion.</p>
+    <div id="conceptCards" class="concept-grid"></div>
+  </section>
+  <section class="concept-section dark">
+    <div class="concept-banner"><h2 style="color:#fff;">Next step with <em>Forma.</em></h2><p id="conceptNext">If this direction feels close, Forma can turn it into a proper website with custom design, written copy, responsive build, and launch support.</p></div>
+  </section>
+</main>
+<script>
+(function(){
+  function decodeConcept(){const params=new URLSearchParams(window.location.search);const raw=params.get('concept');if(!raw)return null;try{const normalized=raw.replace(/-/g,'+').replace(/_/g,'/');const padded=normalized+'='.repeat((4-normalized.length%4)%4);const json=decodeURIComponent(escape(atob(padded)));return JSON.parse(json);}catch{return null;}}
+  function text(id,value){const el=document.getElementById(id);if(el&&value)el.textContent=value;}
+  function escapeHtml(value){return String(value||'').replace(/[&<>"']/g,function(char){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[char];});}
+  function headlineHtml(value){return escapeHtml(value).replace(/&lt;em&gt;/g,'<em>').replace(/&lt;\/em&gt;/g,'</em>');}
+  const concept=decodeConcept();if(!concept){text('conceptIntro','This preview link is missing its concept data. Please generate a fresh preview from the Imagine page.');return;}
+  document.documentElement.style.setProperty('--concept-bg',concept.palette.bg);document.documentElement.style.setProperty('--concept-accent',concept.palette.accent);document.documentElement.style.setProperty('--concept-ink',concept.palette.ink);
+  text('conceptLogo',concept.businessName);text('conceptKicker',concept.businessType+' concept');document.getElementById('conceptHeadline').innerHTML=headlineHtml(concept.headline);text('conceptIntro',concept.intro);text('conceptPositioning',concept.positioning);text('conceptNext',concept.nextStep);
+  if(concept.image){document.getElementById('conceptVisual').innerHTML='<img src="'+concept.image.replace(/"/g,'&quot;')+'" alt="">';}
+  document.getElementById('conceptCards').innerHTML=concept.sections.map(function(item){return '<article class="concept-card"><h3>'+escapeHtml(item.title)+'</h3><p>'+escapeHtml(item.copy)+'</p></article>';}).join('');
+})();
+</script>
+</body>
+</html>

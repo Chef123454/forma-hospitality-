@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imagine Your Website - Forma Hospitality Studio</title>
+<meta name="description" content="Share your hospitality business details and receive an instant custom website concept from Forma.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+.imagine-layout{display:grid;grid-template-columns:.9fr 1.3fr;gap:5rem;align-items:start;margin-top:4rem;}
+.imagine-card{background:var(--bg2);border:1px solid var(--border);padding:2.5rem;}
+.imagine-note{border:1px solid var(--border);padding:1.6rem;margin-top:2rem;background:var(--bg);}
+.imagine-note h3{font-family:var(--serif);font-size:1.15rem;font-weight:400;margin-bottom:.5rem;}
+.imagine-note p,.step-list li{font-size:13px;color:var(--ink2);line-height:1.8;}
+.step-list{list-style:none;border:1px solid var(--border);margin-top:2rem;}
+.step-list li{padding:1rem 1.2rem;border-bottom:1px solid var(--border);display:flex;gap:.8rem;}
+.step-list li:last-child{border-bottom:none;}
+.step-list span{font-size:11px;font-weight:600;color:var(--green);letter-spacing:.12em;min-width:34px;}
+.form-status{display:none;margin-bottom:1.5rem;padding:1rem 1.2rem;border:1px solid var(--gm);background:var(--gl);color:var(--green);font-size:13px;line-height:1.7;}
+.form-status.show{display:block;}
+.form-status.error{border-color:#e3b4a8;background:#fff1ed;color:#8f3b29;}
+.preview-result{display:none;border:1px solid var(--border);background:#fff;padding:1.5rem;margin-top:1.5rem;}
+.preview-result.show{display:block;}
+.preview-result h3{font-size:1.2rem;margin-bottom:.5rem;}
+.preview-result p{font-size:13px;line-height:1.7;margin-bottom:1rem;}
+@media(max-width:1024px){.imagine-layout{grid-template-columns:1fr;gap:3rem;}}
+</style>
+</head>
+<body data-page="imagine">
+<div id="nav-placeholder"></div>
+
+<div class="page-header">
+  <div class="page-header-tag">Instant Website Concept</div>
+  <h1>Imagine your<br><em>new hospitality website.</em></h1>
+  <p>Share a few details and we will generate a stylish first draft direction for your venue, property, or hospitality brand.</p>
+</div>
+
+<section class="section">
+  <div class="imagine-layout">
+    <div>
+      <div class="s-tag reveal">How it works</div>
+      <h2 class="s-title reveal d1">A first look before<br><em>the first call.</em></h2>
+      <p class="s-lead reveal d2">We use your business type and current website to shape a private concept preview. If your current site has public images or brand signals, the system will try to use them as inspiration.</p>
+      <ul class="step-list reveal d3">
+        <li><span>01</span><div>Tell us who you are and what kind of hospitality business you run.</div></li>
+        <li><span>02</span><div>We read the public details from your current site where available.</div></li>
+        <li><span>03</span><div>You receive a private preview link and the Forma team receives your enquiry.</div></li>
+      </ul>
+      <div class="imagine-note reveal d4">
+        <h3>Private concept preview</h3>
+        <p>This is an automated first draft, not a finished website. It gives you a quick sense of direction, style, structure, and what Forma could build properly for your business.</p>
+      </div>
+    </div>
+
+    <div class="imagine-card reveal d1">
+      <h3 class="form-title">Create your preview</h3>
+      <p class="form-subtitle">Fill in what you can. The website address helps us tailor the draft.</p>
+      <div id="imagineStatus" class="form-status"></div>
+      <form id="imagineForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your name *</label>
+            <input type="text" id="name" name="name" placeholder="Full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="telephone">Telephone number *</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="+66..." required>
+          </div>
+          <div class="form-group">
+            <label for="businessName">Business name</label>
+            <input type="text" id="businessName" name="businessName" placeholder="The Crown, Villa Samara...">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="businessType">Business type *</label>
+          <select id="businessType" name="businessType" required>
+            <option value="">Select your business type</option>
+            <option>Pub or bar</option>
+            <option>Restaurant</option>
+            <option>Cafe or coffee shop</option>
+            <option>Hotel or boutique stay</option>
+            <option>Luxury villa</option>
+            <option>Private chef or catering</option>
+            <option>Event venue</option>
+            <option>Yacht or marine hospitality</option>
+            <option>F&B brand</option>
+            <option>Other hospitality business</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="website">Current website address</label>
+          <input type="url" id="website" name="website" placeholder="https://yourbusiness.com">
+        </div>
+        <div class="form-group">
+          <label for="notes">Anything we should know?</label>
+          <textarea id="notes" name="notes" placeholder="Bookings, menus, rooms, events, private hire, online ordering, brand style..." style="min-height:110px;"></textarea>
+        </div>
+        <button type="submit" class="btn-green" style="width:100%;padding:1rem;font-size:14px;">Generate My Website Preview</button>
+      </form>
+      <div id="previewResult" class="preview-result">
+        <h3>Your concept is ready</h3>
+        <p>Open the preview below. If email sending is configured in Netlify, the visitor receives the same link automatically.</p>
+        <a id="previewLink" href="#" class="btn-outline" target="_blank" rel="noopener">View Website Concept</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="/assets/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('imagineForm');
+  const status = document.getElementById('imagineStatus');
+  const result = document.getElementById('previewResult');
+  const previewLink = document.getElementById('previewLink');
+  if (!form) return;
+
+  function showStatus(message, isError) {
+    status.textContent = message;
+    status.className = isError ? 'form-status show error' : 'form-status show';
+  }
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const button = form.querySelector('button[type="submit"]');
+    const payload = Object.fromEntries(new FormData(form).entries());
+    button.disabled = true;
+    button.textContent = 'Creating your preview...';
+    result.classList.remove('show');
+    showStatus('Creating your custom draft. This can take a few seconds while we check the current website.', false);
+
+    try {
+      const response = await fetch('/.netlify/functions/imagine', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || 'Unable to generate preview.');
+      previewLink.href = data.previewUrl;
+      result.classList.add('show');
+      showStatus(data.emailSent
+        ? 'Done. The preview link has been emailed to the visitor and copied below.'
+        : 'Done. Email delivery is not configured yet, but the preview link is ready below.', false);
+    } catch (error) {
+      showStatus(error.message || 'Something went wrong. Please try again or contact Forma directly.', true);
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Generate My Website Preview';
+    }
+  });
+});
+</script>
+</body>
+</html>

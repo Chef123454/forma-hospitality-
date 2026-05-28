@@ -1,0 +1,25 @@
+{
+  "testimonials": [
+    {
+      "quote": "They understood what our restaurant was about from day one. The site launched in 8 days and our reservation enquiries doubled in the first month.",
+      "name": "Marco L.",
+      "role": "Head Chef & Owner",
+      "location": "Milan",
+      "initials": "ML"
+    },
+    {
+      "quote": "Finally a web designer who actually understands hospitality. No explaining what a covers system is, or why the menu page matters. They just knew.",
+      "name": "Sophie R.",
+      "role": "Villa Manager",
+      "location": "Phuket",
+      "initials": "SR"
+    },
+    {
+      "quote": "Our boutique hotel site was embarrassing us for years. Forma rebuilt it in two weeks. We've had more direct bookings since launch than the whole year prior.",
+      "name": "James K.",
+      "role": "Boutique Hotel Owner",
+      "location": "Chiang Mai",
+      "initials": "JK"
+    }
+  ]
+}
